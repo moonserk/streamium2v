@@ -1,0 +1,22 @@
+$bgcolor: #ffffff00;
+
+body{
+    margin: 0;
+    padding: 0;
+  /*  Background fallback in case of IE8 & down, or in case video doens't load, such as with slower connections  */
+    background: $bgcolor;
+    background-attachment: fixed;
+    background-size: cover;
+
+}
+
+a{
+    text-decoration: none;
+}
+ 
+.icon{
+    color: white;
+    float: right;
+}
+
+
