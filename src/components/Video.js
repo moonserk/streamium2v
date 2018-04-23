@@ -16,8 +16,8 @@ const VideoContainer = styled.video`
     z-index: -100;
 `
 
-const Video = ({ src }) => (
-	<VideoContainer id="video" autoPlay="autoplay" loop="loop" preload="auto" src={src}>
+const Video = ({ src, preview }) => (
+	<VideoContainer id="video" autoPlay="autoplay" loop="loop" preload="auto" src={src} controls={!preview}>
 		{/* <source src={src}></source>
 		<source src="book.webm" type="video/webm"></source> */}
 	</VideoContainer>

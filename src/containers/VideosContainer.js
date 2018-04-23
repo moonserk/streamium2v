@@ -12,6 +12,7 @@ export default class VideosContainer extends React.Component{
         super(props)
         this.state = {
             id: 0,
+            preview: true, 
             isLoading: false,
             error: null,
             items: []
@@ -21,7 +22,7 @@ export default class VideosContainer extends React.Component{
 
     handleChange(e){
         e.preventDefault()
-        this.setState({id: this.state.items.length - 1 <= this.state.id ? 0 : this.state.id + 1})
+        this.setState({id: this.state.items.length - 1 <= this.state.id ? 0 : this.state.id + 1, preview: true})
     }
 
     componentWillMount(){
@@ -42,8 +43,9 @@ export default class VideosContainer extends React.Component{
             return <Loading>Loading ...</Loading>;
         }
         return (
-            <div onWheel={this.handleChange} onClick={this.handleChange}>
-                <Video src={items[this.state.id].src} />
+            <div onWheel={this.handleChange} onClick={e => this.setState({preview: false})}>
+                <Video src={this.state.preview ? items[this.state.id].src : items[this.state.id].fullSrc} 
+                       preview={this.state.preview}/>
             </div>
         );
     }
