@@ -3,10 +3,11 @@ import styled from 'styled-components'
 import "../main.scss"
 
 const VideoContainer = styled.video`
-    display: flex;
-    position: fixed;
+    // display: flex;
+    position: relative;
     // right: 0; 
     // bottom: 0;
+    margin-top: -50px;
     max-width: 100%; 
     max-height: 100%;
     min-width: 100%;

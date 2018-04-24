@@ -35,7 +35,16 @@ module.exports = {
             loader: "sass-loader" // compiles Sass to CSS
           }
         ]
-      }
+      },
+      {
+        test: /\.(jpg|png|svg)$/,
+        use: {
+          loader: "file-loader",
+          options: {
+            name: "src/assets/images/[path][name].[hash].[ext]",
+          },
+        },
+      },
     ]
   },
   plugins: [

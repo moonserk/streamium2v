@@ -2,34 +2,40 @@ import React from 'react'
 import styled from 'styled-components'
 import '../main.scss'
 
-const HeaderWrapper = styled.div`
+import { heart_gray, trend_gray, live_gray } from '../constants/images'
+
+const HeaderWrapper = styled.header`
     display: flex;
+    flex-direction: row;
     justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 50px;
+    justify-content: center;
+    text-align:  center;
     // padding: 20px 0 0;
-    // align-items: center;
-    background-color: black
+    align-items: center;
+    background-color: #12334500; 
+    z-index: 100;
+`
+
+const Divider = styled.div`
+    border: solid 1px white;
+    margin: 0 20px 0 20px;
+    height: 30px;
 `
 const Image = styled.div`
-    // display: flex;
-    align-items: center;
-    font-size: 32px;
-    // width: 65px;
-    // height: 65px;
-    color: white;
-    // background-repeat: no-repeat;
-    // filter: drop-shadow(3px 3px 3px #333);
-    // transition: all 200ms ease-in-out;
+    display: flex;
     cursor: pointer;
-    // &:hover {
-    //     filter: drop-shadow(6px 6px 6px #333);
-    //     transition: all 200ms ease-in-out;
-    //     transform: scale(1.10) rotate(-4.5deg);
-    // }
 `
 
 const Navbar = () => (
     <HeaderWrapper>
-            <Image>&#9776;</Image>
+            <Image><img className="icon" src={live_gray} /></Image>
+            <Divider />
+            <Image><img className="icon" src={heart_gray} /></Image>
+            <Divider />
+            <Image><img className="icon" src={trend_gray} /></Image>
     </HeaderWrapper>
 )
 

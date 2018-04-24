@@ -4,12 +4,22 @@ import './main.scss'
 import Video from './components/Video'
 import Navbar from './components/Navbar'
 import VideosContainer from './containers/VideosContainer'
+import styled from 'styled-components';
+
+const Wrapper = styled.div`
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+`
 
 const App = () => (
-    <div>
-        {/* <Navbar /> */}
+    <Wrapper>
+        <Navbar />
         <VideosContainer />
-    </div>
+    </Wrapper>
 )
 
 ReactDOM.render(
