@@ -1,12 +1,23 @@
 import React from 'react'
-import styled from 'styled-components'
-import "../main.scss"
+import styled ,{ keyframes } from 'styled-components'
+import '../main.scss'
+
+const rotate360 = keyframes`
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+`
 
 const VideoContainer = styled.video`
     // display: flex;
     position: relative;
     // right: 0; 
     // bottom: 0;
+    // animation: ${rotate360} 2s linear;
     margin-top: -50px;
     max-width: 100%; 
     max-height: 100%;
@@ -18,10 +29,10 @@ const VideoContainer = styled.video`
 `
 
 const Video = ({ src, preview }) => (
-	<VideoContainer id="video" autoPlay="autoplay" loop="loop" preload="auto" src={src} controls={!preview}>
-		{/* <source src={src}></source>
-		<source src="book.webm" type="video/webm"></source> */}
-	</VideoContainer>
+        <VideoContainer id="video" autoPlay="autoplay" loop="loop" preload="auto" src={src} controls={!preview}>
+            {/* <source src={src}></source>
+            <source src="book.webm" type="video/webm"></source> */}
+        </VideoContainer>
 )
 
 

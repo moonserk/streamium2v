@@ -5,6 +5,7 @@ body{
     padding: 0;
     background: $bgcolor;
     position: relative;
+    overflow: hidden;
 }
 
 a{
@@ -15,4 +16,3 @@ a{
     height: 30px;
     width: 30px;
 }
-

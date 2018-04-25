@@ -1,4 +1,3 @@
-const path = '../assets/image/'
 import heart_img from '../assets/images/heart.svg'
 import heart_gray_img from '../assets/images/heart-grey.svg'
 import live_gray_img from '../assets/images/liveDark.svg'
